@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "IranSans";
+  src: url("/assets/fonts/IRANSansWeb.ttf");
+}
+
+.swiper-wrapper {
+  height: 100%;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  direction: rtl;
+  font-family: "IranSans";
+}
+
+body {
+  font-family: "IranSans";
+}
