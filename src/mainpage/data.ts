@@ -2,11 +2,23 @@ import teacher1 from "/assets/images/teacher-images/Group 64 (1).png";
 import teacher2 from "/assets/images/teacher-images/Group 65 (1).png";
 import teacher3 from "/assets/images/teacher-images/Group 66.png";
 import teacher4 from "/assets/images/teacher-images/Group 67.png";
-import student1 from "/assets/images/teacher-images/student1.png";
-import student2 from "/assets/images/teacher-images/student2.png";
-import student3 from "/assets/images/teacher-images/student3.png";
+import student1 from "/assets/images/students/1.png";
+import student2 from "/assets/images/students/2.png";
+import student3 from "/assets/images/students/3.png";
+import student4 from "/assets/images/students/4.png";
+import student5 from "/assets/images/students/5.png";
+import student6 from "/assets/images/students/6.png";
+import student7 from "/assets/images/students/7.png";
+import student8 from "/assets/images/students/8.png";
+import student9 from "/assets/images/students/9.png";
 
-export const teachers = [
+export const teachers6 = [
+  { src: teacher1, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
+  { src: teacher2, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
+  { src: teacher3, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
+];
+
+export const teachers9 = [
   { src: teacher1, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
   { src: teacher2, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
   { src: teacher3, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
@@ -21,42 +33,50 @@ export const students = [
   student1,
   student2,
   student3,
-  student1,
-  student2,
-  student3,
-  student1,
-  student2,
-  student3,
+  student4,
+  student5,
+  student6,
+  student7,
+  student8,
+  student9,
 ];
 
 export const faqData = [
   {
-    title: "کلاسینو، همان دی‌وی‌دی‌های ضبط شده است؟",
+    title: "كلاسينو كجاست ؟ ",
     answer:
-      "نه؛ در کلاسینو کلاس‌ها به صورت زنده (آنلاین) برگزار می‌شوند و ارتباط به شکل تعاملی بین دانش‌آموز و اساتید برقرار می‌شود. ",
+      "كلاسينو آموزشگاه آنلاينه كه ميتوني از سراسر كشور در پايه هاي مختلف توي كلاساش شركت كني. ",
   },
   {
-    title: "برای شرکت در کلاس نیاز به تجهیزات خاصی است؟",
-    answer: "نه؛ فقط با یک گوشی یا لپ‌تاپ به آسانی می‌توانید وارد کلاس شوید.",
+    title: "محتواي دوره IQ چيست ؟ مناسب چه دانش آموزاني هست؟ ",
+    answer:
+      "وي دوره IQ قراره يه پله فراتر از كتاب درسي بريم و در كنار تدريسي فراتر از كتاب درسي ، تست و آزمون هم كار كنيم تا شما بتونيد در آزمون هاي ورودي مدارس برتر و تيزهوشان به موفقيت برسيد. اين دوره مناسب دانش آموزاني هست كه ميخوان فراتر از كتاب درسي ياد بگيرند و در آزمون هاي مدارس برتر و تيزهوشان موفق باشند ",
   },
   {
-    title: "برای ورود به کلاس نیاز به نصب نرم‌افزار خاصی داریم؟ ",
-    answer:
-      "نه؛ تمام کلاس‌ها در سایت کلاسینو برگزار می‌شود و نیاز به نصب هیچ نرم‌افزار یا اپلیکیشنی نیست. ",
+    title: "چرا بايد آزمون تيزهوشان و مدارس برتر شركت كنم ؟ ",
+    answer: `مدارس برتر و تيزهوشان ميتونه راهي باشه براي كشف شدن استعداد شما . علاوه بر اون امكانات مدرسه مثل آزمايشگاه ها و سالن هاي ورزشي ، اردوهاي تفريحي و آموزشي و المپيادهاي علمي ، تدريس اساتيد برتر استان در اين مدارس ميتونه باعث تضمين موفقيت شما در مسير تحصيلي باشه.جو رقابتي بين دانش آموزان باعث ايجاد انگيزه براي تلاش بيشتر و كسب موفقيت ميشه .
+و يادت نره كه نفرات برتر كنكور اكثرا از مدارس برتر و تيزهوشان هستند.`,
   },
   {
-    title:
-      "برنامه‌ آموزشی اساتید و مشاوران با آموزشگاه‌های حضوری مطابقت دارد؟ ",
-    answer:
-      "بله؛ برنامه‌ آموزش اساتید و مشاوران کلاسینو دقیقا مثل روندی است که در کلاس‌های حضوری ارائه می‌شود. ",
+    title: "آزمون IQ چه ويژگي هايي داره ؟  ",
+    answer: `این آزمون ها که ماهی یکبار برگزار می‌شوند مناسب دانش آموزانی هست که قصد شرکت در آزمون های مدارس برتر و تیزهوشان دارند . این آزمون ها شبیه ساز آزمون های تیزهوشان و مدارس برتر هستند.
+بعد از هر آزمون تحلیل ویدیویی آزمون توسط اساتید کلاسینو روی پنل قرار میگیره .
+شما کارنامه و تراز و درصد خودتون رو میبینید و میتونین نقاط ضعف و قوت خودتون رو پیدا کنید .`,
+  },
+  {
+    title: "تعداد جلسات کلاس های IQ چندتاست ؟  ",
+    answer: `دروس IQ نهم هفته ای یک جلسه و هر جلسه حدودا ۱:۳۰
+و تعداد جلسات از ۲۰ جلسه تا ۳۵ جلسه با توجه به درس متغیر هست.
+دروس IQ ششم هفته دو جلسه یک ساعته و تعداد جلسات از ۵۰ تا ۶۰ جلسه متغیر هست`,
   },
   {
     title: "آیا امکان پرداخت اقساطی در کلاسینو وجود دارد؟ ",
-    answer: "بله",
+    answer:
+      "بله شما میتونید خرید و ثبت نام خودتون رو به صورت قسط بندی انجام بدید ",
   },
   {
-    title: "چه مدت بعد از کلاس، فیلم‌های ضبط شده قابل مشاهده است؟ ",
+    title: "چه مدت بعد از کلاس فیلم های ضبط شده کلاس قابل مشاهده است ؟  ",
     answer:
-      "۲۴ تا ۴۸ ساعت بعد از برگزاری کلاس‌ آنلاین، می‌توانید آن را به صورت آفلاین در پنل کاربری خود مشاهده کنید. ",
+      "حداکثر ۲۴ ساعت بعد از برگزاری کلاس ضبط شده قابل مشاهده خواهد بود . ",
   },
 ];

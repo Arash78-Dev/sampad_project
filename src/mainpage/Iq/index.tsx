@@ -12,7 +12,7 @@ const Iq: FC = () => {
 
       <GradeTabs value={grade} onChange={setGrade} />
 
-      <TeacherSwiper />
+      <TeacherSwiper grade={grade} />
 
       <MainButton>مشاهده دروس و اساتید</MainButton>
     </div>

@@ -24,19 +24,21 @@ const GoodClassino: FC = () => {
     <div className="flex flex-col gap-12 justify-center items-center">
       <img
         src="/assets/images/Titles/کلاسینو خوبه؛ چون ....png"
-        className="w-[30%]"
+        className="w-[70%] md:w-[50%] lg:w-[30%]"
       />
 
-      <div className="flex flex-row gap-6 w-[60%]">
+      <div className="flex flex-col lg:flex-row gap-6 w-[50%] md:w-[90%] lg:w-[85%] xl:w-[70%] 2xl:w-[60%]">
         {goodCLassinoList.map((value) => {
           return (
             <div
               key={value.title}
-              className="flex flex-1 bg-white shadow-lg rounded-[30px] py-12 flex-col gap-4 items-center justify-center"
+              className="flex flex-1 bg-white shadow-lg rounded-[30px] py-4 md:py-8 lg:py-12 flex-col gap-4 items-center justify-center"
             >
-              <img src={value.image} alt={value.title} className="w-44 h-20" />
+              <img src={value.image} alt={value.title} className="h-12 lg:h-20" />
 
-              <p>{value.title}</p>
+              <p className="text-[12px] md:text-[16px] lg:text-[18px]">
+                {value.title}
+              </p>
             </div>
           );
         })}

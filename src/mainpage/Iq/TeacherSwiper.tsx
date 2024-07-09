@@ -1,12 +1,33 @@
-import { FC, useEffect, useRef } from "react";
-import { SwiperRef, Swiper, SwiperSlide } from "swiper/react";
-import { teachers } from "../data";
+import { FC, useEffect, useRef, useState } from "react";
 import "swiper/css";
+import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
+import { ismd, issm, isxl } from "../../utils/mediaQeuries";
+import { teachers6, teachers9 } from "../data";
 import TeacherCard from "./TeacherCard";
 
-const TeacherSwiper: FC = () => {
-  const perView = 4;
+interface Props {
+  grade: "six" | "nine";
+}
+
+const TeacherSwiper: FC<Props> = ({ grade }) => {
+  const perView = isxl ? 4 : ismd ? 3 : issm ? 2 : 1;
   const swiperRef = useRef<SwiperRef>(null);
+  const [teachers, setTeachers] = useState<
+    {
+      src: string;
+      name: string;
+      jobTitle: string;
+    }[]
+  >([]);
+
+  useEffect(() => {
+    if (grade === "six") {
+      setTeachers(teachers6);
+      return;
+    }
+
+    setTeachers(teachers9);
+  }, [grade]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -14,21 +35,25 @@ const TeacherSwiper: FC = () => {
         swiperRef.current?.swiper.activeIndex ===
         teachers.length - (perView ?? 0)
       ) {
-        swiperRef.current.swiper.slideTo(0);
+        swiperRef.current.swiper.slideToLoop(0);
       }
       swiperRef.current?.swiper.slideNext();
     }, 3000);
 
     return () => clearTimeout(timer);
-  }, [perView]);
+  }, [perView, teachers.length]);
+
+  const isDisable = teachers.length <= perView;
 
   return (
-    <div className="flex flex-row gap-12 w-[80%]">
+    <div className="flex flex-row gap-2 md:gap-12 w-[90%] md:w-[80%] justify-evenly">
       <button
+        disabled={isDisable}
+        style={{ cursor: isDisable ? "not-allowed" : "pointer" }}
         onClick={() => {
           swiperRef.current?.swiper.slidePrev();
         }}
-        className="bg-white rounded-full p-1 w-8 h-8  self-center flex items-center justify-center"
+        className="bg-white rounded-full p-1 w-8 h-8 self-center flex items-center justify-center"
       >
         <img src="/assets/images/Icons/Icon.png" />
       </button>
@@ -36,7 +61,7 @@ const TeacherSwiper: FC = () => {
       <div className="flex-1 overflow-hidden">
         <Swiper
           style={{ width: "100%", paddingBlock: 24 }}
-          spaceBetween={10}
+          spaceBetween={8}
           slidesPerView={perView}
           ref={swiperRef}
         >
@@ -53,9 +78,11 @@ const TeacherSwiper: FC = () => {
       </div>
 
       <button
+        disabled={isDisable}
         onClick={() => {
           swiperRef.current?.swiper.slideNext();
         }}
+        style={{ cursor: isDisable ? "not-allowed" : "pointer" }}
         className="bg-white rounded-full p-1 rotate-180 w-8 h-8  self-center flex items-center justify-center"
       >
         <img src="/assets/images/Icons/Icon.png" />

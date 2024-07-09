@@ -10,25 +10,31 @@ const FaqItem: FC<Props> = ({ answer, title }) => {
 
   return (
     <div
-      className={`flex flex-col  w-[80%] bg-white gap-8 p-7 ${
-        isShow ? "h-36" : "h-20"
-      } overflow-hidden rounded-[30px] transition-all shadow-lg cursor-pointer`}
+      className={`flex flex-col  w-[80%] bg-white ${
+        isShow ? "gap-8" : "gap-0"
+      } p-7  overflow-hidden rounded-[30px] transition-all shadow-lg cursor-pointer`}
       onClick={() => {
         setIsShow((prev) => !prev);
       }}
     >
-      <div className="flex flex-row justify-between   items-center">
-        <p>{title}</p>
+      <div className="flex flex-row justify-between gap-4  items-center">
+        <p className="text-[12px] md:text-[16px] lg:text-[18px]">{title}</p>
 
         <img
           src="/assets/images/Icons/Icon.png"
           className={`${
             isShow ? "rotate-[270deg]" : "rotate-[90deg]"
-          } transition-all h-4`}
+          } transition-all h-3 md:h-4`}
         />
       </div>
 
-      <p>{answer}</p>
+      <p
+        className={`text-[12px] md:text-[16px] lg:text-[18px] ${
+          isShow ? "max-h-screen opacity-100" : "max-h-[0px] opacity-0"
+        }  transition-all`}
+      >
+        {answer}
+      </p>
     </div>
   );
 };

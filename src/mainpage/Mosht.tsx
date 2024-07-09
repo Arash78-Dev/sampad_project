@@ -12,13 +12,13 @@ const Mosht: FC = () => {
 
       <div className="flex flex-col items-center gap-3">
         <img
-          className="w-[80%]"
+          className="w-[70%] md:w-[60%] lg:w-[70%]"
           style={{ aspectRatio: 6 / 1 }}
           src="/assets/images/Titles/تیـــزهوشـان تو مُشتــــته!.png"
         />
 
-        <p className="text-[#191919] text-[32px] text-center">
-          کلاس‌های آنلاین IQ ویژه آمادگی آزمون <br />
+        <p className="text-[#191919] w-[70%] text-[16px] md:text-[24px] lg:text-[32px]  text-center">
+          کلاس‌های آنلاین IQ ویژه آمادگی آزمون
           ورودی مدارس برتر و تیزهوشان
         </p>
 

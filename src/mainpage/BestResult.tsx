@@ -2,9 +2,10 @@ import { FC, useEffect, useRef } from "react";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { students } from "./data";
 import "swiper/css";
+import { islg, issm } from "../utils/mediaQeuries";
 
 const BestResult: FC = () => {
-  const perView = 3;
+  const perView = islg ? 3 : issm ? 2 : 1;
   const swiperRef = useRef<SwiperRef>(null);
 
   useEffect(() => {
@@ -13,7 +14,7 @@ const BestResult: FC = () => {
         swiperRef.current?.swiper.activeIndex ===
         students.length - (perView ?? 0)
       ) {
-        swiperRef.current.swiper.slideTo(0);
+        swiperRef.current.swiper.slideToLoop(0);
       }
       swiperRef.current?.swiper.slideNext();
     }, 3000);
@@ -24,44 +25,44 @@ const BestResult: FC = () => {
   return (
     <div className="flex flex-col items-center gap-6 w-full ">
       <img
-        className="w-[40%]"
+        className="w-[80%] md:w-[60%] lg:w-[40%]"
         src="/assets/images/Titles/بهترین نتایج در سال‌های اخیر_ .svg"
       />
 
-      <div className="flex gap-12 w-[70%]">
-        <div className="flex-col p-12 rounded-[30px] shadow-lg bg-white flex-[1]">
-          <img />
+      <div className="flex flex-col-reverse md:flex-row gap-6 w-[80%] lg:w-[80%] xl:[70%] 2xl:w-[60%] items-stretch">
+        <div className="flex flex-col p-4 md:p-12 items-center rounded-[30px] shadow-lg gap-3 bg-white flex-[1] justify-evenly">
+          <img src="/assets/images/rezayat_card1.png" className="w-full " />
 
-          <p className="text-[20px] text-center">
+          <p className="text-[14px] md:text-[16px] lg:text-[20px] text-center ">
             بیش از ۹۷% رضایت دانش‌آموزان و والدین
           </p>
         </div>
 
-        <div className="flex-col p-12 rounded-[30px] shadow-lg bg-white flex-[2]">
-          <p className="text-[20px]  text-center">
+        <div className="flex-col p-4 md:p-12 rounded-[30px] shadow-lg bg-white flex-[2] items-center">
+          <p className="text-[14px] md:text-[16px] lg:text-[20px]  text-center">
             استفاده حدود ۲ میلیون کاربر از کلاس‌های کلاسینو
           </p>
 
-          <img />
+          <img src="/assets/images/classino_user_card.png" className="w-full" />
         </div>
       </div>
 
-      <div className="flex gap-24 w-[70%]  p-12 rounded-[30px] items-center shadow-lg bg-white">
+      <div className="flex flex-col-reverse md:flex-row gap-6 md:gap-24 w-[80%] lg:w-[80%] xl:[70%] 2xl:w-[60%]  p-9 md:p-12 rounded-[30px] items-center shadow-lg bg-white">
         <div className="flex flex-col flex-[1] gap-6">
           <img src="/assets/images/Vector/userChart.png" />
 
-          <p className="text-[20px] text-center">
+          <p className="text-[14px] md:text-[16px] lg:text-[20px] text-center">
             صدها قبولی در مدارس برتر و تیزهوشان (سمپاد)
           </p>
         </div>
 
-        <div className="flex-col overflow-hidden  flex-[2] relative">
+        <div className="flex-col overflow-hidden  flex-[2] relative w-full mx-24 md:mx-2">
           <div className="absolute h-full w-[5%] bg-gradient-to-tl from-white from-0% via-transparent via-60% to-transparent  z-10 right-0" />
           <div className="absolute h-full w-[5%] bg-gradient-to-tr from-white from-0% via-transparent via-60% to-transparent z-10 left-0" />
 
           <Swiper
-            style={{ width: "100%", padding: 12, height: "100%" }}
-            spaceBetween={0}
+            style={{ width: "100%", padding: 36, height: "100%" }}
+            spaceBetween={6}
             slidesPerView={perView}
             ref={swiperRef}
           >

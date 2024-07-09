@@ -4,10 +4,10 @@ import FaqItem from "./FaqItem";
 
 const Faq: FC = () => {
   return (
-    <div className="flex flex-col gap-12 items-center h-[80rem]">
+    <div className="flex flex-col gap-4 lg:gap-12 items-center ">
       <img
         src="/assets/images/Titles/سوالات پرتکرار_.svg"
-        className="w-[20%]"
+        className="w-[80%] sm:w-[60%] md:w-[40%] lg:w-[20%]"
       />
 
       {faqData.map((value) => (
