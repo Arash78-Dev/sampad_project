@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren } from "react";
-import icon from "/assets/images/Icons/Icon.png"
+import icon from "/assets/images/Icons/Icon.svg"
 
 interface Props {}
 
