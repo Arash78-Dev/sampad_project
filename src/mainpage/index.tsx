@@ -10,7 +10,7 @@ import { ismd } from "../utils/mediaQeuries";
 
 const MainPage: FC = () => {
   return (
-    <div className="flex flex-col relative bg-[#FCFBFF] mb-4">
+    <div className="flex flex-col relative bg-[#FCFBFF] pb-6 overflow-hidden">
       <img
         className="w-full  absolute object-fit  top-[7rem] lg:top-[-10rem]"
         src={

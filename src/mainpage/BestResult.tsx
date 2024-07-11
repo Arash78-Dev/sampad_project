@@ -30,8 +30,13 @@ const BestResult: FC = () => {
       />
 
       <div className="flex flex-col-reverse md:flex-row gap-6 w-[80%] lg:w-[80%] xl:[70%] 2xl:w-[60%] items-stretch">
-        <div className="flex flex-col p-4 md:p-12 items-center rounded-[30px] shadow-lg gap-3 bg-white flex-[1] justify-evenly">
-          <img src="/assets/images/rezayat_card1.png" className="w-full " />
+        <div className="flex flex-col p-4 md:p-12 items-center rounded-[30px] shadow-lg gap-9 bg-white flex-[1] justify-evenly">
+          <div>
+            <img
+              src="/assets/images/rezayat_card_main.png"
+              className="w-full"
+            />
+          </div>
 
           <p className="text-[14px] md:text-[16px] lg:text-[20px] text-center ">
             بیش از ۹۷% رضایت دانش‌آموزان و والدین

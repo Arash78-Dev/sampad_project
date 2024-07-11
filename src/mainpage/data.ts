@@ -1,7 +1,14 @@
-import teacher1 from "/assets/images/teacher-images/Group 64 (1).png";
-import teacher2 from "/assets/images/teacher-images/Group 65 (1).png";
-import teacher3 from "/assets/images/teacher-images/Group 66.png";
-import teacher4 from "/assets/images/teacher-images/Group 67.png";
+import behnam_banapoor from "/assets/images/teacher-images/behnam_banapoor.png";
+import arman_ebrahimi from "/assets/images/teacher-images/arman_ebrahimi.png";
+import tehrani_khalaj from "/assets/images/teacher-images/tehrani_khalaj.png";
+import nazanin_abasi from "/assets/images/teacher-images/nazanin_abasi.png";
+import amar_tajbakhs from "/assets/images/teacher-images/amar_tajbakhs.png";
+import hamidreza_mansoorian from "/assets/images/teacher-images/hamidreza_mansoorian.png";
+import aryan_heidari from "/assets/images/teacher-images/aryan_heidari.png";
+import parmis_mahmoodi from "/assets/images/teacher-images/parmis_mahmoodi.png";
+import parsa_jahani from "/assets/images/teacher-images/parsa_jahani.png";
+import hamid_taleb_tabar from "/assets/images/teacher-images/hamid_taleb_tabar.png";
+import armin_kamali from "/assets/images/teacher-images/armin_kamali.png";
 import student1 from "/assets/images/students/1.png";
 import student2 from "/assets/images/students/2.png";
 import student3 from "/assets/images/students/3.png";
@@ -13,20 +20,67 @@ import student8 from "/assets/images/students/8.png";
 import student9 from "/assets/images/students/9.png";
 
 export const teachers6 = [
-  { src: teacher1, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
-  { src: teacher2, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
-  { src: teacher3, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
+  {
+    src: behnam_banapoor,
+    name: "استاد بهنام بناپور",
+    jobTitle: "هوش و استعداد تحلیلی IQ ششم",
+  },
+  {
+    src: tehrani_khalaj,
+    name: "استاد حسام خلج طهرانی",
+    jobTitle: "هوش و استعداد تحلیلی IQ ششم",
+  },
+  {
+    src: arman_ebrahimi,
+    name: "استاد آرمان ابراهیمی",
+    jobTitle: "مشاوره و برنامه ریزی ششم ",
+  },
 ];
 
 export const teachers9 = [
-  { src: teacher1, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
-  { src: teacher2, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
-  { src: teacher3, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
-  { src: teacher4, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
-  { src: teacher1, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
-  { src: teacher2, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
-  { src: teacher3, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
-  { src: teacher4, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
+  {
+    src: parmis_mahmoodi,
+    name: "استاد پارمیس محمودی",
+    jobTitle: "شیمی و زمین IQ نهم",
+  },
+  { src: aryan_heidari, name: "استاد آریان حیدری", jobTitle: "ریاضی IQ نهم" },
+  {
+    src: tehrani_khalaj,
+    name: "استاد حسام خلج طهرانی",
+    jobTitle: "هوش و استعداد تحلیلی IQ نهم",
+  },
+  { src: parsa_jahani, name: "استاد پارسا جهانی", jobTitle: "زیست IQ نهم" },
+  {
+    src: amar_tajbakhs,
+    name: "استاد عمارتاج بخش",
+    jobTitle: "عربی نهم و عربی IQ نهم",
+  },
+  {
+    src: hamidreza_mansoorian,
+    name: "استاد حمیدرضا منصوریان",
+    jobTitle: "مطالعات نهم و مطالعات IQ نهم",
+  },
+  {
+    src: nazanin_abasi,
+    name: "استاد نازنین عباسی",
+    jobTitle: "مشاوره و برنامه ریزی نهم",
+  },
+  {
+    src: behnam_banapoor,
+    name: "استاد بهنام بناپور",
+    jobTitle: "هوش و استعداد تحلیلی IQ نهم",
+  },
+  {
+    src: hamid_taleb_tabar,
+    name: "استاد حمید طالب تبار",
+    jobTitle: "فارسی IQ نهم",
+  },
+  {
+    src: arman_ebrahimi,
+    name: "استاد آرمان ابراهیمی",
+    jobTitle: "مشاوره و برنامه ریزی نهم",
+  },
+  { src: armin_kamali, name: "استاد آرمین کمالی", jobTitle: "فیزیک IQ نهم" },
 ];
 
 export const students = [
