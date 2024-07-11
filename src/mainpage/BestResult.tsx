@@ -3,6 +3,10 @@ import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { students } from "./data";
 import "swiper/css";
 import { islg, issm } from "../utils/mediaQeuries";
+import bestResultImage from "/assets/images/Titles/بهترین نتایج در سال‌های اخیر_ .svg";
+import rezayat_card from "/assets/images/rezayat_card_main.png";
+import classino_user_card from "/assets/images/classino_user_card.png";
+import user_chart from "/assets/images/Vector/userChart.png";
 
 const BestResult: FC = () => {
   const perView = islg ? 3 : issm ? 2 : 1;
@@ -24,18 +28,12 @@ const BestResult: FC = () => {
 
   return (
     <div className="flex flex-col items-center gap-6 w-full ">
-      <img
-        className="w-[80%] md:w-[60%] lg:w-[40%]"
-        src="/assets/images/Titles/بهترین نتایج در سال‌های اخیر_ .svg"
-      />
+      <img className="w-[80%] md:w-[60%] lg:w-[40%]" src={bestResultImage} />
 
       <div className="flex flex-col-reverse md:flex-row gap-6 w-[80%] lg:w-[80%] xl:[70%] 2xl:w-[60%] items-stretch">
         <div className="flex flex-col p-4 md:p-12 items-center rounded-[30px] shadow-lg gap-9 bg-white flex-[1] justify-evenly">
           <div>
-            <img
-              src="/assets/images/rezayat_card_main.png"
-              className="w-full"
-            />
+            <img src={rezayat_card} className="w-full" />
           </div>
 
           <p className="text-[14px] md:text-[16px] lg:text-[20px] text-center ">
@@ -48,13 +46,13 @@ const BestResult: FC = () => {
             استفاده حدود ۲ میلیون کاربر از کلاس‌های کلاسینو
           </p>
 
-          <img src="/assets/images/classino_user_card.png" className="w-full" />
+          <img src={classino_user_card} className="w-full" />
         </div>
       </div>
 
       <div className="flex flex-col-reverse md:flex-row gap-6 md:gap-24 w-[80%] lg:w-[80%] xl:[70%] 2xl:w-[60%]  p-9 md:p-12 rounded-[30px] items-center shadow-lg bg-white">
         <div className="flex flex-col flex-[1] gap-6">
-          <img src="/assets/images/Vector/userChart.png" />
+          <img src={user_chart} />
 
           <p className="text-[14px] md:text-[16px] lg:text-[20px] text-center">
             صدها قبولی در مدارس برتر و تیزهوشان (سمپاد)

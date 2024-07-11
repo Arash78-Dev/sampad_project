@@ -3,6 +3,7 @@ import "swiper/css";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { ismd, issm, isxl } from "../../utils/mediaQeuries";
 import { teachers6, teachers9 } from "../data";
+import icon from "/assets/images/Icons/Icon.png";
 import TeacherCard from "./TeacherCard";
 
 interface Props {
@@ -53,9 +54,9 @@ const TeacherSwiper: FC<Props> = ({ grade }) => {
         onClick={() => {
           swiperRef.current?.swiper.slidePrev();
         }}
-        className="bg-white rounded-full p-1 w-8 h-8 self-center flex items-center justify-center"
+        className="bg-white rounded-full p-1 w-8 h-8 self-center flex items-center justify-center border"
       >
-        <img src="/assets/images/Icons/Icon.png" />
+        <img src={icon} />
       </button>
 
       <div className="flex-1 overflow-hidden">
@@ -85,7 +86,7 @@ const TeacherSwiper: FC<Props> = ({ grade }) => {
         style={{ cursor: isDisable ? "not-allowed" : "pointer" }}
         className="bg-white rounded-full p-1 rotate-180 w-8 h-8  self-center flex items-center justify-center"
       >
-        <img src="/assets/images/Icons/Icon.png" />
+        <img src={icon} />
       </button>
     </div>
   );

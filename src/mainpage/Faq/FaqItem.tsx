@@ -1,3 +1,4 @@
+import icon from "/assets/images/Icons/Icon.png"
 import { FC, useState } from "react";
 
 interface Props {
@@ -21,7 +22,7 @@ const FaqItem: FC<Props> = ({ answer, title }) => {
         <p className="text-[12px] md:text-[16px] lg:text-[18px]">{title}</p>
 
         <img
-          src="/assets/images/Icons/Icon.png"
+          src={icon}
           className={`${
             isShow ? "rotate-[270deg]" : "rotate-[90deg]"
           } transition-all h-3 md:h-4`}
