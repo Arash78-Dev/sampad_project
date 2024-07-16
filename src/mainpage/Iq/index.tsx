@@ -5,7 +5,7 @@ import TeacherSwiper from "./TeacherSwiper";
 import azmoonImage from "/assets/images/Titles/دوره IQ ویژه آمادگی آزمون ورودی تیزهوشان (سمپاد) و مدارس برتر.svg";
 
 const Iq: FC = () => {
-  const [grade, setGrade] = useState<"six" | "nine">("six");
+  const [grade, setGrade] = useState<"six" | "nine">("nine");
 
   return (
     <div className="flex flex-col items-center gap-6">
