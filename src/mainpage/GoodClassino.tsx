@@ -15,7 +15,7 @@ const goodCLassinoList = [
     image: jozve,
   },
   {
-    title: "مشاهده انلاین کلاس ها",
+    title: "مشاهده آنلاین کلاس ها",
     image: onlineClass,
   },
   {

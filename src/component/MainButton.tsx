@@ -1,46 +1,16 @@
 import { FC, PropsWithChildren } from "react";
-import icon from "/assets/images/Icons/Icon.svg"
+import icon from "/assets/images/Icons/Icon.svg";
 
 interface Props {}
 
 const MainButton: FC<PropsWithChildren<Props>> = ({ children }) => {
-  const searchParams = new URLSearchParams(window.location.search);
+  const baseLink = "https://student.classino.com/auth/login";
 
- const utm_source = searchParams.get("utm_source")
- const utm_medium = searchParams.get("utm_medium")
- const utm_campaign = searchParams.get("utm_campaign")
- const utm_content = searchParams.get("utm_content")
- const gclid = searchParams.get("gclid")
+  const addQuerytoLink = (baseLink: string) => {
+    const base = baseLink + window.location.search;
 
- const baseLink = "https://student.classino.com/auth/login"
-
-  const addQuerytoLink = (baseLink:string) => {
-    let base = baseLink;
-    if(!utm_source && !utm_campaign && !utm_content && !utm_medium && !gclid) return base; 
-    base = base + "?"
-
-    if(utm_campaign) {
-      base  = base + `utm_campaign=${utm_campaign}`
-    }
-
-    if(utm_source) {
-      base  = base + `utm_source=${utm_source}`
-    }
-
-    if(utm_content) {
-      base  = base + `utm_content=${utm_content}`
-    }
-
-    if(utm_medium) {
-      base  = base + `utm_medium=${utm_medium}`
-    }
-    
-    if(gclid) {
-      base  = base + `gclid=${gclid}`
-    }
-
-    return base
-  }
+    return base;
+  };
 
   return (
     <a href={addQuerytoLink(baseLink)}>

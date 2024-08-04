@@ -12,7 +12,7 @@ import bgMobile from "/assets/images/BG/bg-mobile.png";
 
 const MainPage: FC = () => {
   return (
-    <div className="flex flex-col relative bg-[#FCFBFF] pb-6 overflow-hidden">
+    <div className="flex flex-col relative bg-[#FCFBFF] pb-44 overflow-hidden">
       <img
         className="w-full  absolute object-fit  top-[7rem] lg:top-[-10rem]"
         src={ismd ? bgDesktop : bgMobile}
